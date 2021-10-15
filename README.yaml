@@ -1,0 +1,32 @@
+---
+#
+# This is the canonical configuration for the `README.md`
+# Run `make readme` to rebuild the `README.md`
+#
+
+# Name of this project
+name: "kinesis AWS Terraform module"
+
+# Short description of this project
+description: |-
+  A bare bones AWS Kinesis stream module to provision the basics.
+
+# Canonical GitHub repo
+github_repo: osodevops/aws-terraform-kinesis-stream
+
+# How to use this project
+usage: |-
+  ### Inputs
+  ```html
+    | Name | Description | Type | Default | Required |
+    |------|-------------|------|---------|:--------:|
+    | <a name="input_encryption_type"></a> [encryption\_type](#input\_encryption\_type) | n/a | `string` | `"KMS"` | no |
+    | <a name="input_kms_key_id"></a> [kms\_key\_id](#input\_kms\_key\_id) | n/a | `string` | `"alias/aws/kinesis"` | no |
+    | <a name="input_stream"></a> [stream](#input\_stream) | n/a | `map` | <pre>{<br>  "encryption_typ": "KMS",<br>  "name": "terraform-kinesis-test",<br>  "retention_period": 48,<br>  "shard_count": 1,<br>  "shard_level_metrics": [<br>    "IncomingBytes",<br>    "OutgoingBytes"<br>  ]<br>}</pre> | no |
+    | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
+  ```
+
+related:
+  - name: "AWS Kinesis Data Streams"
+    description: "Collect streaming data, at scale, for real-time analytics"
+    url: "https://aws.amazon.com/kinesis/data-streams/"
